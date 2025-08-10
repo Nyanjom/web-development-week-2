@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Forms</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Enhanced Content Page</h1>
+        <p>Exploring HTML5 capabilities for richer content and user-friendly forms.</p>
+    </header>
+
+    <section id="content-showcase">
+        <h2>Content Showcase: Lists, Tables, and Media</h2>
+
+        <h3>Unordered List</h3>
+        <ul>
+            <li>Semantic HTML5 for better accessibility.</li>
+            <li>Native form validation without JavaScript.</li>
+            <li>Responsive design considerations.</li>
+            <li>Rich media embedding for dynamic content.</li>
+        </ul>
+
+        <h3>Development Milestones (Ordered List)</h3>
+        <ol>
+            <li>Initial Planning and Wireframing</li>
+            <li>Content Structure Definition</li>
+            <li>Form Element Prototyping</li>
+            <li>Validation Rule Implementation</li>
+            <li>Accessibility Review</li>
+            <li>Final Deployment</li>
+        </ol>
+
+        <h3>Product Comparison (Table)</h3>
+        <table>
+            <caption>Comparison of Web Technologies</caption>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>HTML5</th>
+                    <th>CSS3</th>
+                    <th>JavaScript</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Structure</td>
+                    <td>Excellent</td>
+                    <td>Good</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>Styling</td>
+                    <td>Limited</td>
+                    <td>Excellent</td>
+                    <td>Good</td>
+                </tr>
+                <tr>
+                    <td>Interactivity</td>
+                    <td>Limited</td>
+                    <td>Limited</td>
+                    <td>Excellent</td>
+                </tr>
+                <tr>
+                    <td>Validation</td>
+                    <td>Native Support</td>
+                    <td>N/A</td>
+                    <td>Programmatic</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">This table highlights the core strengths of each web technology.</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <h3>Demonstration Video (Media)</h3>
+        <video controls width="640" height="360" poster="https://placehold.co/640x360/png?text=Video+Thumbnail" aria-label="A short demonstration video about HTML5 features">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+
+        <h3>Background Music (Audio)</h3>
+        <audio controls loop preload="metadata" aria-label="Relaxing background music">
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h3>Illustrative Image (Image)</h3>
+        <img src="https://placehold.co/600x400/png?text=HTML5+Concepts" alt="Abstract illustration representing HTML5 concepts" width="600" height="400">
+    </section>
+
+    <section id="html5-form">
+        <h2>HTML5 User Registration Form</h2>
+        <form action="#" method="get" autocomplete="on">
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="John Doe" required autocomplete="name" minlength="3" maxlength="50" title="Please enter your full name (3-50 characters).">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="john.doe@example.com" required autocomplete="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address.">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Min 8 characters" required minlength="8" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Password must be at least 8 characters long and contain at least one letter and one number.">
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" required minlength="8" title="Please confirm your password.">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g., +123-456-7890" pattern="^\+?[0-9]{3}-?[0-9]{6,10}$" title="Enter a valid phone number (e.g., +123-456-7890 or 1234567890).">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required max="2007-01-01" min="1925-01-01" title="You must be at least 18 years old.">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Address Information</legend>
+
+                <label for="address">Street Address:</label>
+                <input type="text" id="address" name="address" placeholder="123 Main St" autocomplete="street-address">
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" placeholder="Anytown" autocomplete="address-level2">
+
+                <label for="zipCode">Zip Code:</label>
+                <input type="text" id="zipCode" name="zipCode" placeholder="12345" pattern="^\d{5}(-\d{4})?$" title="Enter a 5-digit zip code (e.g., 12345) or 5+4 (e.g., 12345-6789).">
+
+                <label for="country">Country:</label>
+                <select id="country" name="country" required autocomplete="country-name">
+                    <option value="">--Please select a country--</option>
+                    <option value="usa">United States</option>
+                    <option value="can">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="aus">Australia</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" rows="5" placeholder="Tell us a little about yourself..." maxlength="200"></textarea>
+
+                <p>Preferred Contact Method:</p>
+                <input type="radio" id="contactEmail" name="contactMethod" value="email" checked>
+                <label for="contactEmail">Email</label><br>
+                <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+                <label for="contactPhone">Phone</label><br>
+                <input type="radio" id="contactMail" name="contactMethod" value="mail">
+                <label for="contactMail">Mail</label>
+
+                <p>Interests (select all that apply):</p>
+                <input type="checkbox" id="interestWebDev" name="interests" value="webdev">
+                <label for="interestWebDev">Web Development</label><br>
+                <input type="checkbox" id="interestDesign" name="interests" value="design">
+                <label for="interestDesign">Graphic Design</label><br>
+                <input type="checkbox" id="interestMarketing" name="interests" value="marketing">
+                <label for="interestMarketing">Digital Marketing</label><br>
+
+                <label for="website">Personal Website:</label>
+                <input type="url" id="website" name="website" placeholder="https://www.example.com" title="Please enter a valid URL.">
+
+                <label for="favoriteColor">Favorite Color:</label>
+                <input type="color" id="favoriteColor" name="favoriteColor" value="#0000ff">
+
+                <label for="quantity">Quantity (1-10):</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" readonly>
+
+                <label for="feedbackRange">Satisfaction (1-10):</label>
+                <input type="range" id="feedbackRange" name="feedbackRange" min="1" max="10" value="5">
+            </fieldset>
+
+            <button type="submit">Register</button>
+            <button type="reset">Clear Form</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HTML5 Assignment. All rights reserved.</p>
+    </footer>
+</body>
+</html>
